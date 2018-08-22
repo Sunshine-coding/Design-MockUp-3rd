@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/******* Global CSS variable *******/
+:root{
+        /* font */
+        --font-title: 'Roboto Condensed', sans-serif;
+        --font-content: Arial, Helvetica, sans-serif;
+        /* color*/
+        --spruce: #454e57;
+        --middle-grey:  #757c86;
+        --light-grey: #c1c8d0;
+        --white: #fff;
+        --clear-blue: #00b5ea;
+        /* border */
+        --blue-border: 1.4px solid var(--clear-blue);
+}
+
+/******* Main *******/
+body{
+    margin: 0 auto;
+    background: var(--spruce);
+}
+
+h1{
+    color: var(--white);
+}
+
+.wrapper{
+    /* Centering the content 6§*/
+    width: 80%;
+    margin: 0 auto;
+}
