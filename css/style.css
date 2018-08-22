@@ -27,10 +27,23 @@ body{
 
 h1{
     color: var(--white);
+    font-family: var(--font-title);
 }
 
 .wrapper{
     /* Centering the content 6§*/
     width: 80%;
     margin: 0 auto;
+}
+
+
+/******* Header *******/
+header{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+header p{
+    color: var(--white);
+    margin: 1rem 0;
 }
