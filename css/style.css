@@ -1,49 +1,210 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 /******* Global CSS variable *******/
-:root{
-        /* font */
-        --font-title: 'Roboto Condensed', sans-serif;
-        --font-content: Arial, Helvetica, sans-serif;
-        /* color*/
-        --spruce: #454e57;
-        --middle-grey:  #757c86;
-        --light-grey: #c1c8d0;
-        --white: #fff;
-        --clear-blue: #00b5ea;
-        /* border */
-        --blue-border: 1.4px solid var(--clear-blue);
+
+:root {
+    /* font */
+    --font-title: 'Roboto Condensed', sans-serif;
+    --font-content: Arial, Helvetica, sans-serif;
+    /* color*/
+    --spruce: #454e57;
+    --middle-grey: #757c86;
+    --light-grey: #c1c8d0;
+    --white: #fff;
+    --clear-blue: #00b5ea;
+    /* border */
+    --blue-border: 1.4px solid var(--clear-blue);
+    --middle-grey-border: 1px solid var(--middle-grey);
+    --white-border: 1px solid var(--white);
 }
 
-/******* Main *******/
-body{
+/******* Style for general use *******/
+
+body {
     margin: 0 auto;
     background: var(--spruce);
 }
 
-h1{
-    color: var(--white);
-    font-family: var(--font-title);
-}
-
-.wrapper{
+.wrapper {
     /* Centering the content 6§*/
     width: 80%;
     margin: 0 auto;
 }
 
-
-/******* Header *******/
-header{
-    text-align: center;
-    margin-top: 2rem;
+.title {
+    color: var(--white);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-bottom: var(--blue-border);
+    padding: 1rem 0;
 }
 
-header p{
+.sub-title {
+    color: var(--white);
+    font-family: var(--font-title);
+    margin: 2.5rem 0;
+    font-weight: 500;
+}
+
+.sub-explain {
+    color: var(--light-grey);
+    font-family: var(--font-title);
+    margin: 2rem 0;
+    font-weight: 200;
+}
+
+/******* Header *******/
+
+header {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--white);
+    font-family: var(--font-title);
+}
+
+header p {
     color: var(--white);
     margin: 1rem 0;
+}
+
+/******* Content *******/
+
+/*** Entire Layout with Grid areas***/
+
+.form-container>form .personal-info {
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    "title title title title" 
+    "name-email name-email name-email phone" 
+    "address address address address" 
+    "second-address second-address second-address second-address"
+    "geo geo geo geo" "hear hear hear hear";
+    grid-gap: 1rem;
+}
+
+.title {
+    grid-area: title;
+}
+
+.personal-info__name-email {
+    grid-area: name-email;
+}
+
+.personal-info__phone {
+    grid-area: phone;
+}
+
+.personal-info__address {
+    grid-area: address;
+}
+
+.personal-info__seconde-address {
+    grid-area: second-address;
+}
+
+.personal-info__geo {
+    grid-area: geo;
+}
+
+.hear {
+    grid-area: hear;
+}
+
+/*** Section of Personal-info ***/
+
+.personal-info div .input-group {
+    padding-top: 2rem;
+    border-bottom: var(--middle-grey-border);
+}
+
+.personal-info div label {
+    font-family: var(--font-content);
+    color: var(--middle-grey);
+}
+
+.personal-info div input {
+    background: var(--spruce);
+    border: 0;
+    padding-top: 2rem;
+}
+
+.personal-info__geo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personal-info__geo .geo-quarter {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+/*** Section of skill-location ***/
+
+.skill-location {
+    border: 1px solid red;
+}
+
+.skill-location__primary-design {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-location__primary-design label {
+    flex: 1;
+    border: var(--white-border);
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.skill-location__primary-design input[type='radio'] {
+    display: none;
+}
+
+.skill-location__primary-design input[type='radio']:checked+.radio-btn--bluebg {
+    background: var(--clear-blue);
+    color: var(--white);
+}
+
+/* make experience and woking-place reponsive */
+
+.skill-location__experience-place {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*why not workin?*/
+}
+
+.skill-location__experience,
+.skill-location__working-place {
+    flex: 1;
+}
+
+.skill-location__experience-checkbox,
+.skill-location__working-place-checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-location__experience-checkbox .checkbox-input-group,
+.skill-location__working-place-checkbox .checkbox-input-group {
+    flex: 1;
+    color: var(--white);
+    font-family: var(--font-content);
+    padding: 0.5rem;
+    margin: 0;
+}
+
+/*** Section of Portfolio ***/
+
+.portfolio {
+    border: 1px solid green;
 }
