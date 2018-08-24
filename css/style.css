@@ -134,6 +134,8 @@ header p {
     padding-top: 2rem;
     width: 100%;
     margin-left: 90px;
+    outline: none;
+    font-size: 1rem;
 }
 
 .personal-info #Re-enter-email {
@@ -162,9 +164,10 @@ header p {
 #state,
 #country-region,
 #zipCode,
-#city::-webkit-input-placeholder {
+#city::placeholder {
     margin-left: 0;
     font-size: 1rem;
+    outline: none;
 }
 
 /*** Section of skill-location ***/
@@ -254,6 +257,7 @@ header p {
     width: 100%;
     margin-left: 100px;
     outline: none;
+    font-size: 1rem;
 }
 
 .portfolio textarea {
