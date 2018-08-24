@@ -76,7 +76,7 @@ header p {
 
 /*** Entire Layout with Grid areas***/
 
-.form-container>form .personal-info {
+.form-container > form .personal-info {
     border: 1px solid black;
     display: grid;
     grid-template-areas: 
@@ -121,18 +121,29 @@ header p {
 .personal-info div .input-group {
     padding-top: 2rem;
     border-bottom: var(--middle-grey-border);
+    position: relative; 
+    display: flex; /* make label and input to fix in the container div*/
 }
 
 .personal-info div label {
     font-family: var(--font-content);
     color: var(--middle-grey);
+    position: absolute;
+    bottom: 0; 
 }
 
 .personal-info div input {
     background: var(--spruce);
     border: 0;
     padding-top: 2rem;
+    width: 100%;
+    margin-left: 90px;
 }
+
+.personal-info #Re-enter-email {
+    margin-left: 150px;
+}
+
 
 .personal-info__geo {
     display: flex;
@@ -142,6 +153,15 @@ header p {
 .personal-info__geo .geo-quarter {
     flex: 1;
     margin-right: 0.5rem;
+}
+
+#city, #state, #country-region, #zipCode, #city{
+    margin-left: 0;
+}
+
+#city, #state, #country-region, #zipCode, #city::-webkit-input-placeholder{
+    margin-left: 0;
+    font-size: 1rem;
 }
 
 /*** Section of skill-location ***/
@@ -160,7 +180,6 @@ header p {
     flex: 1;
     border: var(--white-border);
     padding: 1rem;
-    margin: 1rem;
     text-align: center;
     color: var(--white);
 }
@@ -207,4 +226,35 @@ header p {
 
 .portfolio {
     border: 1px solid green;
+}
+
+.portfolio__link {
+    border-bottom: var(--middle-grey-border);
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+}
+
+.portfolio__link label {
+    font-family: var(--font-content);
+    color: var(--middle-grey);
+    position: absolute;
+    bottom:0;
+}
+
+.portfolio__link input {
+    background: var(--spruce);
+    border: 0;
+    padding-top: 2rem;
+    width: 100%;
+    margin-left: 100px;
+    outline: none;
+}
+
+.portfolio textarea{
+    width: 100%;
+    background: var(--spruce);
+    border: 1px solid var(--light-grey);
+    color: var(--light-grey);
+    font-size: 1rem;
 }
