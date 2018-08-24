@@ -29,10 +29,11 @@ body {
     background: var(--spruce);
 }
 
-.wrapper {
+fieldset {
     /* Centering the content 6§*/
     width: 80%;
     margin: 0 auto;
+    border: 0;
 }
 
 .title {
@@ -58,16 +59,16 @@ body {
     font-weight: 200;
 }
 
-/******* Header *******/
+/******* Form intro - legend *******/
 
-header {
+legend {
     text-align: center;
     margin-top: 2rem;
     color: var(--white);
     font-family: var(--font-title);
 }
 
-header p {
+legend p {
     color: var(--white);
     margin: 1rem 0;
 }
