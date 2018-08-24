@@ -12,6 +12,7 @@
     --font-content: Arial, Helvetica, sans-serif;
     /* color*/
     --spruce: #454e57;
+    --light-spruce: #707f8e;
     --middle-grey: #757c86;
     --light-grey: #c1c8d0;
     --white: #fff;
@@ -21,7 +22,6 @@
     --middle-grey-border: 1px solid var(--middle-grey);
     --white-border: 1px solid var(--white);
 }
-
 
 /******* Style for general use *******/
 
@@ -61,7 +61,6 @@ fieldset {
     font-weight: 200;
 }
 
-
 /******* Form intro - legend *******/
 
 legend {
@@ -75,7 +74,6 @@ legend p {
     color: var(--white);
     margin: 1rem 0;
 }
-
 
 /******* Content *******/
 
@@ -114,7 +112,6 @@ legend p {
 .hear {
     grid-area: hear;
 }
-
 
 /*** Section of Personal-info ***/
 
@@ -178,7 +175,6 @@ legend p {
     outline: none;
 }
 
-
 /*** Section of skill-location ***/
 
 .skill-location__primary-design {
@@ -187,7 +183,7 @@ legend p {
     justify-content: space-between;
 }
 
-.skill-location__primary-design label{
+.skill-location__primary-design label {
     flex: 0 1 250px;
     border: var(--white-border);
     padding: 1rem;
@@ -225,13 +221,66 @@ legend p {
     flex-direction: column;
 }
 
-.skill-location__experience-checkbox .checkbox-input-group,
-.skill-location__working-place-checkbox .checkbox-input-group {
-    flex: 1;
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     color: var(--white);
     font-family: var(--font-content);
-    padding: 0.5rem;
-    margin: 0;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--spruce);
+    border: 2px solid var(--light-grey);
+}
+
+.checkbox-label:hover input~.checkmark,
+.checkbox-label:hover input~.checkmark {
+    background: var(--light-spruce);
+}
+
+.checkbox-label>input:checked~.checkmark {
+    background: var(--clear-blue);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label>input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after{
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 
@@ -272,7 +321,7 @@ legend p {
 
 /*** Submit form button ***/
 
-.submit{
+.submit {
     border: var(--white-border);
     padding: 1rem;
     text-align: center;
