@@ -317,6 +317,7 @@ legend p {
     border: 1px solid var(--light-grey);
     color: var(--light-grey);
     font-size: 1rem;
+    outline: none;
 }
 
 /*** Submit form button ***/
@@ -330,4 +331,21 @@ legend p {
     margin-top: 1rem;
     width: 200px;
     font-size: 1rem;
+}
+
+/******* HTML5 validation *******/
+input:focus:invalid, textarea:focus:invalid {
+    border: 1px dashed orange;
+}
+
+input:valid, textarea:valid{
+    outline: none;
+}
+
+[placeholder]:focus:valid{
+    color: lightseagreen;
+}
+
+[placeholder]:focus:invalid{
+    color: lightcoral;
 }

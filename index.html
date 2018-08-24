@@ -22,50 +22,50 @@
                     <div class="personal-info__name-email">
                         <div class="input-group">
                             <label for="fullname">Full name*</label>
-                            <input type="text" id="fullname" />
+                            <input type="text" id="fullname" placeholder="HyeSoo Park" required pattern="[A-Z][a-z]{2,9}"/>
                         </div>
                         <div class="input-group">
-                            <label for="email">Last name*</label>
-                            <input type="email" id="email" />
-                        </div>
+                                <label for="email">email*</label>
+                                <input type="email" id="email" placeholder="hyesoo@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>
+                            </div>
                         <div class="input-group">
                             <label for="Re-enter-email">Re-enter email*</label>
-                            <input type="email" id="Re-enter-email" />
+                            <input type="email" id="Re-enter-email" placeholder="hyesoo@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>
                         </div>
                     </div>
                     <div class="personal-info__phone">
                         <div class="input-group">
                             <label for="phone">Phone*</label>
-                            <input type="tel" id="phone" />
+                            <input type="tel" id="phone" placeholder="000-0000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" required/>
                         </div>
                     </div>
                     <div class="personal-info__address">
                         <div class="input-group">
                             <label for="address">Address*</label>
-                            <input type="text" id="address" />
+                            <input type="text" id="address" placeholder="ex)Pyynikki, Tampere, Finland" required pattern="[A-Za-z][A-Za-z' -]+ "/>
                         </div>
                     </div>
                     <div class="personal-info__seconde-address">
                         <div class="input-group">
-                            <input type="text" id="Address2" />
+                            <input type="text" id="Address2" pattern="[A-Za-z][A-Za-z' -]+ "/>
                         </div>
                     </div>
                     <div class="personal-info__geo">
                         <div class="input-group geo-quarter">
                             <label for="city"></label>
-                            <input type="text" id="city" placeholder="city" />
+                            <input type="text" id="city" placeholder="city" required pattern="[A-Za-z][A-Za-z' -]+ "/>
                         </div>
                         <div class="input-group geo-quarter">
                             <label for="state"></label>
-                            <input type="text" id="state" placeholder="state" />
+                            <input type="text" id="state" placeholder="state" pattern="[A-Za-z][A-Za-z' -]+ "/>
                         </div>
                         <div class="input-group geo-quarter">
                             <label for="country-region"></label>
-                            <input type="text" id="country-region" placeholder="Country/Region*" />
+                            <input type="text" id="country-region" placeholder="Country/Region*" required pattern="[A-Za-z][A-Za-z' -]+ "/>
                         </div>
                         <div class="input-group geo-quarter">
                             <label for="zipCode"></label>
-                            <input type="text" id="zipCode" placeholder="Zip/Postal code" />
+                            <input type="text" id="zipCode" placeholder="Zip/Postal code" pattern="[A-Za-z0-9][A-Za-z0-9' -]+ " />
                         </div>
                     </div>
                     <div class="hear">
@@ -152,13 +152,13 @@
                         Prove you're IBM's next great designer by showing us how your area. What you've done. How you think. Tell us story.
                     </h4>
                     <div class="portfolio__link">
-                        <label>Portfolio link</label>
-                        <input type="url" name="portfolio-link" />
+                        <label>Portfolio link*</label>
+                        <input type="url" name="portfolio-link" placeholder="https://visittampere.fi/en/articles/pispala-and-pyynikki/" required />
                     </div>
                     <textarea rows="10" cols="200" placeholder="Anything else(another link, availablity, etc?)"></textarea>
                 </section>
                 <div>
-                    <input type="submit" class="submit" value="Submit" />
+                    <button type="submit" class="submit" value="Submit">Submit</button>
                 </div>
             </form>
         </div>
