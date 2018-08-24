@@ -179,12 +179,14 @@ header p {
     justify-content: space-between;
 }
 
-.skill-location__primary-design label {
-    flex: 1;
+.skill-location__primary-design label{
+    flex: 0 1 250px;
     border: var(--white-border);
     padding: 1rem;
     text-align: center;
     color: var(--white);
+    margin-top: 1rem;
+    font-family: var(--font-content);
 }
 
 .skill-location__primary-design input[type='radio'] {
