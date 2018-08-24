@@ -151,7 +151,7 @@ legend p {
 }
 
 .personal-info__geo .geo-quarter {
-    flex: 1;
+    flex: 1 1 270px;
     margin-right: 0.5rem;
 }
 
@@ -212,7 +212,7 @@ legend p {
 
 .skill-location__experience,
 .skill-location__working-place {
-    flex: 1;
+    flex: 1 1 540px;
 }
 
 .skill-location__experience-checkbox,
@@ -333,6 +333,7 @@ legend p {
     font-size: 1rem;
 }
 
+
 /******* HTML5 validation *******/
 input:focus:invalid, textarea:focus:invalid {
     border: 1px dashed orange;
@@ -348,4 +349,22 @@ input:valid, textarea:valid{
 
 [placeholder]:focus:invalid{
     color: lightcoral;
+}
+
+
+/******* Media query *******/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .form-container>form .personal-info {
+        display: grid;
+        grid-template-areas: 
+        "title title title" 
+        "name-email name-email name-email"
+        "phone phone phone"
+        "address address address"
+        "second-address second-address second-address" 
+        "geo geo geo"
+        "hear hear hear";
+        grid-gap: 1rem;
+    }
 }
