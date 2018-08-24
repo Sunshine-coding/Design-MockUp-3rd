@@ -263,3 +263,15 @@ header p {
     color: var(--light-grey);
     font-size: 1rem;
 }
+
+/*** Submit form button***/
+.submit{
+    border: var(--white-border);
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    background: var(--clear-blue);
+    margin-top: 1rem;
+    width: 200px;
+    font-size: 1rem;
+}
