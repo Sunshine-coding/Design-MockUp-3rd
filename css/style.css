@@ -141,6 +141,7 @@ legend p {
     margin-left: 90px;
     outline: none;
     font-size: 1rem;
+    color: var(--light-grey);
 }
 
 .personal-info #Re-enter-email {
@@ -161,15 +162,17 @@ legend p {
 #state,
 #country-region,
 #zipCode,
-#city {
+#city,
+#how-hear {
     margin-left: 0;
+    color: var(--light-grey);
 }
 
 #city,
 #state,
 #country-region,
 #zipCode,
-#city::placeholder {
+#how-hear::placeholder {
     margin-left: 0;
     font-size: 1rem;
     outline: none;
@@ -256,6 +259,7 @@ legend p {
     margin-left: 100px;
     outline: none;
     font-size: 1rem;
+    color: var(--light-grey);
 }
 
 .portfolio textarea {
