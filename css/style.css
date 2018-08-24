@@ -22,6 +22,7 @@
     --white-border: 1px solid var(--white);
 }
 
+
 /******* Style for general use *******/
 
 body {
@@ -30,7 +31,7 @@ body {
 }
 
 fieldset {
-    /* Centering the content 6§*/
+    /* Centering the content§*/
     width: 80%;
     margin: 0 auto;
     border: 0;
@@ -59,6 +60,7 @@ fieldset {
     font-weight: 200;
 }
 
+
 /******* Form intro - legend *******/
 
 legend {
@@ -73,12 +75,12 @@ legend p {
     margin: 1rem 0;
 }
 
+
 /******* Content *******/
 
 /*** Entire Layout with Grid areas***/
 
 .form-container>form .personal-info {
-    border: 1px solid black;
     display: grid;
     grid-template-areas: "title title title title" "name-email name-email name-email phone" "address address address address" "second-address second-address second-address second-address" "geo geo geo geo" "hear hear hear hear";
     grid-gap: 1rem;
@@ -111,6 +113,7 @@ legend p {
 .hear {
     grid-area: hear;
 }
+
 
 /*** Section of Personal-info ***/
 
@@ -171,11 +174,8 @@ legend p {
     outline: none;
 }
 
-/*** Section of skill-location ***/
 
-.skill-location {
-    border: 1px solid red;
-}
+/*** Section of skill-location ***/
 
 .skill-location__primary-design {
     display: flex;
@@ -208,7 +208,6 @@ legend p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*why not workin?*/
 }
 
 .skill-location__experience,
@@ -231,11 +230,8 @@ legend p {
     margin: 0;
 }
 
-/*** Section of Portfolio ***/
 
-.portfolio {
-    border: 1px solid green;
-}
+/*** Section of Portfolio ***/
 
 .portfolio__link {
     border-bottom: var(--middle-grey-border);
@@ -269,7 +265,8 @@ legend p {
     font-size: 1rem;
 }
 
-/*** Submit form button***/
+/*** Submit form button ***/
+
 .submit{
     border: var(--white-border);
     padding: 1rem;
