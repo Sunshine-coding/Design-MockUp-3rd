@@ -76,15 +76,10 @@ header p {
 
 /*** Entire Layout with Grid areas***/
 
-.form-container > form .personal-info {
+.form-container>form .personal-info {
     border: 1px solid black;
     display: grid;
-    grid-template-areas: 
-    "title title title title" 
-    "name-email name-email name-email phone" 
-    "address address address address" 
-    "second-address second-address second-address second-address"
-    "geo geo geo geo" "hear hear hear hear";
+    grid-template-areas: "title title title title" "name-email name-email name-email phone" "address address address address" "second-address second-address second-address second-address" "geo geo geo geo" "hear hear hear hear";
     grid-gap: 1rem;
 }
 
@@ -121,15 +116,16 @@ header p {
 .personal-info div .input-group {
     padding-top: 2rem;
     border-bottom: var(--middle-grey-border);
-    position: relative; 
-    display: flex; /* make label and input to fix in the container div*/
+    position: relative;
+    display: flex;
+    /* make label and input to fix in the container div*/
 }
 
 .personal-info div label {
     font-family: var(--font-content);
     color: var(--middle-grey);
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
 }
 
 .personal-info div input {
@@ -144,7 +140,6 @@ header p {
     margin-left: 150px;
 }
 
-
 .personal-info__geo {
     display: flex;
     flex-wrap: wrap;
@@ -155,11 +150,19 @@ header p {
     margin-right: 0.5rem;
 }
 
-#city, #state, #country-region, #zipCode, #city{
+#city,
+#state,
+#country-region,
+#zipCode,
+#city {
     margin-left: 0;
 }
 
-#city, #state, #country-region, #zipCode, #city::-webkit-input-placeholder{
+#city,
+#state,
+#country-region,
+#zipCode,
+#city::-webkit-input-placeholder {
     margin-left: 0;
     font-size: 1rem;
 }
@@ -239,7 +242,7 @@ header p {
     font-family: var(--font-content);
     color: var(--middle-grey);
     position: absolute;
-    bottom:0;
+    bottom: 0;
 }
 
 .portfolio__link input {
@@ -251,7 +254,7 @@ header p {
     outline: none;
 }
 
-.portfolio textarea{
+.portfolio textarea {
     width: 100%;
     background: var(--spruce);
     border: 1px solid var(--light-grey);
