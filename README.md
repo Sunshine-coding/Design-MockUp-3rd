@@ -22,5 +22,5 @@ It designed for web first and maded to be reponsive to smaller screen with media
  |                                                            |
 
 # Demo
-[design Mockup](https://flyjwayur.github.io/Integrify-3rdDesignMockup/)
-https://flyjwayur.github.io/Integrify-3rdDesignMockup/
+[Design Mockup](https://sunshine-coding.github.io/Design-MockUp-3rd/)
+ : https://sunshine-coding.github.io/Design-MockUp-3rd/
